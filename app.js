@@ -1,32 +1,60 @@
-// This function asks for the users name 
+// This function asks for the users name
 function getUsername() {
-    let myName = prompt("What is your name?");
-    return document.write(myName)
+  let myName = prompt("What is your name?");
+  return document.write(myName);
 }
 
-getUsername ();
+const hours = [
+  "6am",
+  "7am",
+  "8am",
+  "9am",
+  "10am",
+  "11am",
+  "12pm",
+  "1pm",
+  "2pm",
+  "3pm",
+  "4pm",
+  "5pm",
+  "6pm",
+  "7pm",
+];
 
-const shopLocation = {
-    name: 'shopName',
-    min cust: 23,
-    max cust: 65,
-    avg cookies: 6.3,
-    getRandomNo: function(min cust, max cust) {
-      return Math.random() * (max cust - min cust) + min;
+const seattle = {
+  name: "Seattle",
+  minCust: 23,
+  maxCust: 65,
+  avgCookies: 6.3,
+  customersEachHour: [],
+  cookiesEachHour: [],
+  calcCustomersEachHour: function () {
+    for (let a = 0; a < hours.length; a++) {
+      this.customersEachHour.push(random(this.minCust, this.maxCust));
     }
-  }
-  
-  // add a method that adds a room type to the array
+  },
+  calcCookiesEachHour: function () {
+    for (let a = 0; a < this.customersEachHour.length; a++) {
+      this.cookiesEachHour.push(
+        Math.floor(this.customersEachHour[a] * this.avgCookies)
+      );
+    }
+  },
+  render() {
+    this.calcCustomersEachHour();
+    this.calcCookiesEachHour();
+    const ul = document.getElementById("seattle");
+    for (let a = 0; a < this.cookiesEachHour.length; a++) {
+      const li = document.createElement("li");
+      li.textContent = `${hours[a]}: ${this.cookiesEachHour[a]} cookies`;
+      ul.appendChild(li);
+    }
+  },
+};
 
-    const hotel = {
-    name: hotelName,
-    rooms: 40,
-    booked: 25,
-    gym: true,
-    roomTypes: ["Twin", "Double", "Suites"],
-    checkAvailabilty: function(min cust, max cust) {
-      return this.rooms - this.booked;
-    }
-  }
-  
-  // add a method that adds a room type to the array
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+seattle.render();
+console.log(seattle);
