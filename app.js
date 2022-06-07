@@ -118,3 +118,17 @@ const myStores = [seattle, tokyo, dubai, paris, lima];
 for (let a = 0; a < myStores.length; a++) {
   myStores[a].render();
 }
+
+const myForm = document.getElementById("my-form");
+myForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const storeName = event.target.storeName.value;
+  const minCust = event.target.minCust.value;
+  const maxCust = event.target.maxCust.value;
+  const avgCookies = event.target.avgCookies.value;
+  const myNewStore = new Store(storeName, minCust, maxCust, avgCookies);
+  myNewStore.render();
+})
+
+
+
