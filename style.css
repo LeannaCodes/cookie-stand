@@ -10,10 +10,27 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
 }
 
 body {
   background-color: peachpuff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+  font-family: "Bebas Neue", cursive;
+}
+
+nav li {
+  justify-content: space-around;
 }
 
 h1 {
@@ -21,13 +38,6 @@ h1 {
   font-family: "Fjalla One", sans-serif;
   text-align: center;
   font-size: xx-large;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-size: xx-large;
-  font-family: "Bebas Neue", cursive;
 }
 
 a:hover {
@@ -41,16 +51,22 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  display: flex;
+  align-items: flex-end;
 }
 
-li {
-  color: white;
+#openHours {
+  color: black;
   padding: 1rem;
   list-style: none;
 }
 
 img {
   width: 100px;
+  border-radius: 50%;
+  display:flex;
+  align-self: flex-start;
+  padding: 2rem;
 }
 
 footer {
