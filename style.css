@@ -3,23 +3,36 @@ font-family: 'Akshar', sans-serif;
 font-family: 'Bebas Neue', cursive;
 font-family: 'Fjalla One', sans-serif;
 */
+body {
+  background-color: peachpuff;
+}
 
 header {
   background-color: salmon;
   color: white;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  display: flex;
+  padding: 0 2rem;
 }
 
-body {
-  background-color: peachpuff;
+header img {
+  width: 100px;
+  border-radius: 50%;
+  padding: 2rem;
 }
 
-nav {
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav li {
+  padding: 2rem;
 }
 
 nav a {
@@ -27,10 +40,6 @@ nav a {
   color: white;
   font-size: xx-large;
   font-family: "Bebas Neue", cursive;
-}
-
-nav li {
-  justify-content: space-around;
 }
 
 h1 {
@@ -45,28 +54,10 @@ a:hover {
   color: peachpuff;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  display: flex;
-  align-items: flex-end;
-}
-
 #openHours {
   color: black;
   padding: 1rem;
   list-style: none;
-}
-
-img {
-  width: 100px;
-  border-radius: 50%;
-  display:flex;
-  align-self: flex-start;
-  padding: 2rem;
 }
 
 footer {
