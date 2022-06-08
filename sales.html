@@ -15,10 +15,10 @@
   </head>
   <body>
     <header>
-      <h1>Salmon Cookies Sales</h1>
-      <img src="salmon.png" />
+      <img src="images/salmon cookies logo.png" />
+      <h1>Salmon Cookies</h1>
       <nav>
-        <ul>
+        <ul id="navLi">
           <li><a href="index.html">Home</a></li>
           <li><a href="sales.html">Sales</a></li>
           <li><a href="index.html#AboutMe">About Me</a></li>
@@ -28,24 +28,22 @@
 
     <main>
       <h2>Stores</h2>
-      <table id="dataTable">       
-      </table>
+      <table id="dataTable"></table>
 
       <form id="my-form">
         <fieldset>
-            <legend>Add Locations:</legend>
-            <label for="storeName">Store Name:</label>
-            <input type="text" id="storeName" name="storeName" />
-            <label for="minCust">Minimum Customers:</label>
-            <input type="text" id="minCust" name="minCust" />
-            <label for="maxCust">Maximum Customers:</label>
-            <input type="text" id="maxCust" name="maxCust" />
-            <label for="avgCookies">Average Cookies:</label>
-            <input type="text" id="avgCookies" name="avgCookies" />
-            <button type="submit">Submit</button>
+          <legend>Add Locations:</legend>
+          <label for="storeName">Store Name:</label>
+          <input type="text" id="storeName" name="storeName" />
+          <label for="minCust">Minimum Customers:</label>
+          <input type="text" id="minCust" name="minCust" />
+          <label for="maxCust">Maximum Customers:</label>
+          <input type="text" id="maxCust" name="maxCust" />
+          <label for="avgCookies">Average Cookies:</label>
+          <input type="text" id="avgCookies" name="avgCookies" />
+          <button type="submit">Submit</button>
         </fieldset>
-    </form>
-
+      </form>
     </main>
     <script src="app.js"></script>
   </body>
